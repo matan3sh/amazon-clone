@@ -44,10 +44,19 @@
   background-color: #f0c14b;
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 5px;
 }
 
 @media screen and (max-width: 1400px) {
   .product__home {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .product__home {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

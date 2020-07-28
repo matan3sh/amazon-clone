@@ -1,11 +1,17 @@
 .banner {
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 
 .banner__image {
   width: 100%;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   z-index: -1;
-  margin-bottom: -150px;
+  margin-bottom: -300px;
+}
+
+@media screen and (max-width: 1290px) {
+  .banner__image {
+    margin-bottom: -100px;
+  }
 }

@@ -1,14 +1,17 @@
 import React from 'react';
+import { Utils } from '../../service/Utils';
 import { useStateValue } from '../../context/StateProvider';
 
 const ProductPreview = ({ product: { id, title, price, rating, image } }) => {
-  const [{}, dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
       type: 'ADD_TO_BASKET',
-      item: { id, title, price, rating, image }
+      payload: { id, title, price, rating, image }
     });
+    const updatedBasket = [...basket, { id, title, price, rating, image }];
+    Utils.storeToStorage('basket', updatedBasket);
   };
 
   return (
