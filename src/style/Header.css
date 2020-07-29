@@ -65,3 +65,15 @@
 .header__basketCount {
   margin: 0 10px;
 }
+
+@media screen and (max-width: 522px) {
+  .header__search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .header__option span {
+    font-size: 9px !important;
+  }
+}

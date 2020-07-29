@@ -20,6 +20,11 @@ export function reducer(state, action) {
         ...state,
         basket: action.payload
       };
+    case 'SET_USER':
+      return {
+        ...state,
+        user: action.payload
+      };
     default:
       return state;
   }
